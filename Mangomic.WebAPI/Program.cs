@@ -18,20 +18,23 @@ namespace Mangomic.WebAPI {
 
             builder.Services.AddDbContext<MangomicContext>(optionsBuilder =>
                 optionsBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
-            
 
             var app = builder.Build();
 
             if (app.Environment.IsDevelopment()) {
                 app.UseSwagger();
                 app.UseSwaggerUI();
-            }
+            }                      
 
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
 
             app.MapControllers();
+            app.MapControllerRoute(
+                name: "default",
+                pattern: "{version=v1}/{controller}/{action}/{id?}"
+            );
 
             app.Run();
         }

@@ -5,11 +5,16 @@ namespace Mangomic.Domain {
     [Index(nameof(Email), IsUnique = true)]
     public class User {
         public int Id { get; set; }
+        
         [Required]
-        public int Username { get; set; }
+        public string? Username { get; set; }
+        
         [Required]
-        public int Email { get; set; }
-        public int PasswordHash { get; set; }
+        public string? Email { get; set; }
+        
+        [Required]
+        public string? PasswordHash { get; set; }
+        
         public DateTime CreatedAt { get; } = DateTime.Now;
     }
 }

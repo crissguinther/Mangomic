@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mangomic.Context", "Mangomi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mangomic.Domain", "Mangomic.Domain\Mangomic.Domain.csproj", "{35FB062F-45E2-4240-9A54-441EBFE47082}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mangomic.Model", "Mangomic.Model\Mangomic.Model.csproj", "{1FB198A1-1E13-449C-88BD-6C4E8BA0A8E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mangomic.Test", "Mangomic.Test\Mangomic.Test.csproj", "{9C0F4F7F-7479-4405-9E51-9EF5E52D25FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{35FB062F-45E2-4240-9A54-441EBFE47082}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35FB062F-45E2-4240-9A54-441EBFE47082}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35FB062F-45E2-4240-9A54-441EBFE47082}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FB198A1-1E13-449C-88BD-6C4E8BA0A8E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FB198A1-1E13-449C-88BD-6C4E8BA0A8E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FB198A1-1E13-449C-88BD-6C4E8BA0A8E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FB198A1-1E13-449C-88BD-6C4E8BA0A8E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C0F4F7F-7479-4405-9E51-9EF5E52D25FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C0F4F7F-7479-4405-9E51-9EF5E52D25FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C0F4F7F-7479-4405-9E51-9EF5E52D25FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C0F4F7F-7479-4405-9E51-9EF5E52D25FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
