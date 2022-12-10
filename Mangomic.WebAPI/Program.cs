@@ -1,9 +1,8 @@
+using Mangomic.Context;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
-using WebGallery.Context;
 
-namespace WebGallery.API {
-    class WebGalleryAPI {
+namespace Mangomic.WebAPI {
+    class Mangomic {
         public static void Main(string[] args) {
             WebGallery.Utils.DotEnv.Config();
             var builder = WebApplication.CreateBuilder(args);
@@ -17,7 +16,7 @@ namespace WebGallery.API {
                                      ";password=" + Environment.GetEnvironmentVariable("DB_PASSWORD") +
                                      ";database=" + Environment.GetEnvironmentVariable("DB_DATABASE");
 
-            builder.Services.AddDbContext<WebGalleryContext>(optionsBuilder =>
+            builder.Services.AddDbContext<MangomicContext>(optionsBuilder =>
                 optionsBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
             
 

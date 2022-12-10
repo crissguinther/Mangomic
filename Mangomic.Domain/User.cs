@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
-namespace WebGallery.Domain {
+namespace Mangomic.Domain {
     [Index(nameof(Email), IsUnique = true)]
     public class User {
         public int Id { get; set; }
