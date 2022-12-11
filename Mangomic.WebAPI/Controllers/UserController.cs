@@ -1,7 +1,7 @@
 ﻿using Mangomic.Context;
 using Mangomic.Domain;
 using Mangomic.Model;
-
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Web.Http.Results;
 
@@ -11,6 +11,7 @@ namespace Mangomic.WebAPI.Controllers {
     public class UserController : ControllerBase {
 
         [HttpPost]
+        [AllowAnonymous]
         [Route("/Users/Store")]
         public async Task<IActionResult> StoreAsync([FromServices] MangomicContext context, [FromBody] CreateUserModel model) {
             if (!ModelState.IsValid) {
