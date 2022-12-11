@@ -14,7 +14,7 @@ namespace Mangomic.WebAPI.Controllers {
     public class TokenController : Controller {
         [HttpPost]
         [Route("/Token/Store")]
-        public async Task<IActionResult> StoreAsync([FromServices] ITokenService tokenService, [FromServices] MangomicContext context,[FromBody] UserTokenModel model) {
+        public async Task<IActionResult> StoreAsync([FromServices] ITokenService tokenService, [FromServices] MangomicContext context, [FromBody] UserTokenModel model) {
             User user = await context.Users.FirstOrDefaultAsync<User>(u => u.Email == model.Email);
             if (user == null) return NotFound();
 

@@ -32,6 +32,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Mangomic.Context\Mangomic.Context.csproj" />
+    <ProjectReference Include="..\Mangomic.DAL\Mangomic.DAL.csproj" />
     <ProjectReference Include="..\Mangomic.Model\Mangomic.Model.csproj" />
     <ProjectReference Include="..\Mangomic.Services\Mangomic.Services.csproj" />
   </ItemGroup>
