@@ -1,28 +1,30 @@
-﻿using BC = BCrypt.Net.BCrypt;
+﻿//using Mangomic.Context;
+//using Mangomic.Model;
+//using Microsoft.AspNetCore.Mvc;
 
-using Microsoft.AspNetCore.Mvc;
+//namespace Mangomic.WebAPI.Controllers {
+//    [ApiController]
+//    [Route("v1")]
+//    public class TokenController : Controller {
+//        private readonly MangomicDataContext _context;
+//        private readonly UnitOfWork unitOfWork;
 
-using Mangomic.Context;
-using Mangomic.Domain;
-using Mangomic.Services;
-using Microsoft.EntityFrameworkCore;
-using Mangomic.Model;
+//        public TokenController(MangomicDataContext context) {
+//            _context = context;
+//            unitOfWork = new UnitOfWork(_context);
+//        }
 
-namespace Mangomic.WebAPI.Controllers {
-    [ApiController]
-    [Route("v1")]
-    public class TokenController : Controller {
-        [HttpPost]
-        [Route("/Token/Store")]
-        public async Task<IActionResult> StoreAsync([FromServices] ITokenService tokenService, [FromServices] MangomicContext context, [FromBody] UserTokenModel model) {
-            User user = await context.Users.FirstOrDefaultAsync<User>(u => u.Email == model.Email);
-            if (user == null) return NotFound();
+//        [HttpPost]
+//        [Route("/Token/Store")]
+//        public async Task<IActionResult> StoreAsync([FromServices] ITokenService tokenService, [FromBody] UserTokenModel model) {
+//            var user = unitOfWork.Users.Find(u => u.Email == model.Email).FirstOrDefault();
+//            if (user == null) return NotFound();
 
-            var isValid = BC.Verify(model.Password, user.PasswordHash);
-            if (!isValid) return BadRequest();
+//            var isValid = PasswordHash.VerifyPassword(model.Password, user.PasswordHash);
+//            if (!isValid) return BadRequest();
 
-            var token = tokenService.GenerateToken(user);
-            return Ok(token.ToString());
-        }
-    }
-}
+//            var token = tokenService.GenerateToken(user);
+//            return Ok(token.ToString());
+//        }
+//    }
+//}

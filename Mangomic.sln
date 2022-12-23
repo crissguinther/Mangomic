@@ -3,19 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mangomic.WebAPI", "Mangomic.WebAPI\Mangomic.WebAPI.csproj", "{A848D1A0-AFDE-43A4-969A-FD1DDE203C79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mangomic.API", "Mangomic.WebAPI\Mangomic.API.csproj", "{A848D1A0-AFDE-43A4-969A-FD1DDE203C79}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mangomic.Context", "Mangomic.Context\Mangomic.Context.csproj", "{AC7A22EF-97EC-41B3-AF62-EA6FE4F900B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mangomic.Data", "Mangomic.Context\Mangomic.Data.csproj", "{AC7A22EF-97EC-41B3-AF62-EA6FE4F900B3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mangomic.Domain", "Mangomic.Domain\Mangomic.Domain.csproj", "{35FB062F-45E2-4240-9A54-441EBFE47082}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mangomic.Model", "Mangomic.Model\Mangomic.Model.csproj", "{1FB198A1-1E13-449C-88BD-6C4E8BA0A8E4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mangomic.Test", "Mangomic.Test\Mangomic.Test.csproj", "{9C0F4F7F-7479-4405-9E51-9EF5E52D25FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mangomic.DAL", "Mangomic.DAL\Mangomic.DAL.csproj", "{3A8F5627-0DF4-448D-A5B5-C3981462337C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mangomic.Services", "Mangomic.Services\Mangomic.Services.csproj", "{2340F749-C341-44F7-A8A6-6571C1D1B623}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mangomic.DAL", "Mangomic.DAL\Mangomic.DAL.csproj", "{3A8F5627-0DF4-448D-A5B5-C3981462337C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mangomic.Identity", "Mangomic.Identity\Mangomic.Identity.csproj", "{A8CD416B-051D-4859-B041-CB28460A3573}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,18 +37,14 @@ Global
 		{1FB198A1-1E13-449C-88BD-6C4E8BA0A8E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FB198A1-1E13-449C-88BD-6C4E8BA0A8E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FB198A1-1E13-449C-88BD-6C4E8BA0A8E4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9C0F4F7F-7479-4405-9E51-9EF5E52D25FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9C0F4F7F-7479-4405-9E51-9EF5E52D25FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9C0F4F7F-7479-4405-9E51-9EF5E52D25FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9C0F4F7F-7479-4405-9E51-9EF5E52D25FB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2340F749-C341-44F7-A8A6-6571C1D1B623}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2340F749-C341-44F7-A8A6-6571C1D1B623}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2340F749-C341-44F7-A8A6-6571C1D1B623}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2340F749-C341-44F7-A8A6-6571C1D1B623}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3A8F5627-0DF4-448D-A5B5-C3981462337C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3A8F5627-0DF4-448D-A5B5-C3981462337C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A8F5627-0DF4-448D-A5B5-C3981462337C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A8F5627-0DF4-448D-A5B5-C3981462337C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8CD416B-051D-4859-B041-CB28460A3573}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8CD416B-051D-4859-B041-CB28460A3573}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8CD416B-051D-4859-B041-CB28460A3573}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8CD416B-051D-4859-B041-CB28460A3573}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

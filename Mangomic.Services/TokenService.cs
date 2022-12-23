@@ -6,20 +6,25 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace Mangomic.Services {
+namespace Mangomic.Services
+{
 
-    public interface ITokenService {
+    public interface ITokenService
+    {
         public string GenerateToken(User user);
     }
 
-    public class TokenService : ITokenService {
+    public class TokenService : ITokenService
+    {
         private int Hours { get; } = 6;
 
-        public string GenerateToken(User user) {
+        public string GenerateToken(User user)
+        {
             var handler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(Environment.GetEnvironmentVariable("JWT_SECRET"));
 
-            var descriptor = new SecurityTokenDescriptor {
+            var descriptor = new SecurityTokenDescriptor
+            {
                 Subject = new ClaimsIdentity(new[] {
                     new Claim("Id", user.Id.ToString()),
                     new Claim(ClaimTypes.Email, user.Email),
