@@ -1,5 +1,7 @@
-﻿using Mangomic.Context;
+﻿using Mangomic.Application.Models;
+using Mangomic.Context;
 using Mangomic.Identity.Context;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace Mangomic.API.IoC {
@@ -18,6 +20,15 @@ namespace Mangomic.API.IoC {
 
             services.AddDbContext<IdentityDataContext>(optionsBuilder =>
                 optionsBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+            #endregion
+
+            #region Services
+            services.AddDefaultIdentity<IdentityUser>()
+                .AddRoles<IdentityRole>()
+                .AddEntityFrameworkStores<IdentityDataContext>()
+                .AddDefaultTokenProviders();
+
+            services.AddSingleton<JwtOptions>();
             #endregion
         }
     }

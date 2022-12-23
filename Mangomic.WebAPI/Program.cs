@@ -1,4 +1,5 @@
 using Mangomic.API.IoC;
+using Mangomic.API.IoC.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
@@ -10,13 +11,12 @@ namespace Mangomic.WebAPI {
             WebGallery.Utils.DotEnv.Config();
             var builder = WebApplication.CreateBuilder(args);
 
-            var key = Encoding.ASCII.GetBytes(Environment.GetEnvironmentVariable("JWT_SECRET"));
-
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
             InjectorConfig.RegisterServices(builder.Services);
+            AuthenticationSetup.ConfigureAuthentication(builder.Services, builder.Configuration);
 
             var app = builder.Build();
 
