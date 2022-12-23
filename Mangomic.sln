@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mangomic.API", "Mangomic.WebAPI\Mangomic.API.csproj", "{A848D1A0-AFDE-43A4-969A-FD1DDE203C79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mangomic.API", "Mangomic.API\Mangomic.API.csproj", "{A848D1A0-AFDE-43A4-969A-FD1DDE203C79}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mangomic.Data", "Mangomic.Context\Mangomic.Data.csproj", "{AC7A22EF-97EC-41B3-AF62-EA6FE4F900B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mangomic.Data", "Mangomic.Data\Mangomic.Data.csproj", "{AC7A22EF-97EC-41B3-AF62-EA6FE4F900B3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mangomic.Domain", "Mangomic.Domain\Mangomic.Domain.csproj", "{35FB062F-45E2-4240-9A54-441EBFE47082}"
 EndProject

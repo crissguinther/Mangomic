@@ -1,5 +1,5 @@
 ﻿using Mangomic.Application.Models;
-using Mangomic.Context;
+using Mangomic.Data;
 using Mangomic.Identity.Context;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
