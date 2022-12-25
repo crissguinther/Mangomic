@@ -1,9 +1,4 @@
 using Mangomic.API.IoC;
-using Mangomic.API.IoC.Authentication;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
 
 namespace Mangomic.WebAPI {
     class Mangomic {
@@ -15,8 +10,7 @@ namespace Mangomic.WebAPI {
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            InjectorConfig.RegisterServices(builder.Services);
-            AuthenticationSetup.ConfigureAuthentication(builder.Services, builder.Configuration);
+            builder.Services.RegisterServices(builder.Configuration);
 
             var app = builder.Build();
 

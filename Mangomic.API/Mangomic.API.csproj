@@ -16,8 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Mangomic.Application\Mangomic.Application.csproj" />
     <ProjectReference Include="..\Mangomic.Context\Mangomic.Data.csproj" />
-    <ProjectReference Include="..\Mangomic.Data\Mangomic.Data.csproj" />
     <ProjectReference Include="..\Mangomic.Identity\Mangomic.Identity.csproj" />
   </ItemGroup>
 

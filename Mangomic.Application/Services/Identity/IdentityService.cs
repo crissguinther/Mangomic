@@ -20,13 +20,12 @@ namespace Mangomic.Services.Identity {
 
         public async Task<UserLoginResponseDTO> LoginUser(UserLoginRequestDTO request) {
             var response = await _signInManager.PasswordSignInAsync(request.Email, request.Password, false, false);
-
             var user = new UserLoginResponseDTO(response.Succeeded);
 
             if (!response.Succeeded) {
                 if (response.IsNotAllowed) user.Errors.Add("User not allowed");
             }
-
+            user = await GetToken(request.Email);
             return user;
         }
 

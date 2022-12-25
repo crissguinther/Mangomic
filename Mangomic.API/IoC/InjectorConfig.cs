@@ -1,12 +1,15 @@
-﻿using Mangomic.Application.Models;
-using Mangomic.Data;
+﻿using Mangomic.API.IoC.Authentication;
+using Mangomic.Application.Interfaces.Services;
+using Mangomic.Application.Models;
+using Mangomic.Domain.Context;
 using Mangomic.Identity.Context;
+using Mangomic.Services.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace Mangomic.API.IoC {
     public static class InjectorConfig {
-        public static void RegisterServices(this IServiceCollection services) {
+        public static void RegisterServices(this IServiceCollection services, IConfiguration configuration) {
             #region ConnectionString
             string connectionString = "server=" + Environment.GetEnvironmentVariable("DB_HOST") +
                                      ";user=" + Environment.GetEnvironmentVariable("DB_USER") +
@@ -28,7 +31,11 @@ namespace Mangomic.API.IoC {
                 .AddEntityFrameworkStores<IdentityDataContext>()
                 .AddDefaultTokenProviders();
 
-            services.AddSingleton<JwtOptions>();
+            services.AddScoped<JwtOptions>();
+            services.AddScoped<IIdentityService, IdentityService>();
+
+
+            AuthenticationSetup.ConfigureAuthentication(services, configuration);
             #endregion
         }
     }

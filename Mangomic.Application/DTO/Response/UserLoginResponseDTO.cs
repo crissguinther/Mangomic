@@ -10,9 +10,7 @@ namespace Mangomic.Application.DTO.Response {
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public DateTime? ExpirationDate { get; set; }
 
-        public List<string> Errors { get; set; }
-
-        public UserLoginResponseDTO() => Errors = new List<string>();
+        public List<string> Errors { get; set; } = new List<string>();
 
         public UserLoginResponseDTO(bool success = true) => Success = success;
 
@@ -21,6 +19,6 @@ namespace Mangomic.Application.DTO.Response {
             ExpirationDate = expirationDate;
         }
 
-        public void AddError(string error) => Errors.Add(error);
+        public void AddError(IEnumerable<string> errors) => Errors.AddRange(errors);
     }
 }
